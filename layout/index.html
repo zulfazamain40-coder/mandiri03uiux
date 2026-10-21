@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web Profile</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #aaaea5;
+            margin: 0;
+            padding: 30px 15px;
+            color: #222;
+        }
+
+        /* HEADER */
+        header {
+            max-width:1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #b17a7a;
+            border: 1px solid #a18282;
+            border-bottom: none;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        /* NAVIGATION */
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            padding: 12px 20px;
+            background-color: #684040;
+        }
+
+        nav a {
+            color: rgb(224, 214, 214);
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        nav a:hover {
+            color: #aba087;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 1000px;
+            margin: auto;
+            background-color: rgb(151, 105, 105);
+            border: 1px solid #b78787;
+            padding: 25px;
+        }
+
+        .profile-top {
+            display: grid;
+            grid-template-columns: 150px 1fr 120px;
+            gap: 25px;
+            align-items: start;
+        }
+
+        /* FOTO PROFIL */
+        .profile-photo {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #555;
+            border-radius: 5px;
+        }
+
+        /* IDENTITAS */
+        .identity h2 {
+            margin: 0 0 15px;
+            font-size: 28px;
+        }
+
+        .identity p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        /* KATEGORI */
+        .categories h3 {
+            margin-top: 0;
+            font-size: 20px;
+            align-content: normal;
+        }
+
+        .categories ul {
+            padding-left: 0;
+            line-height: 1.8;
+        }
+
+        /* DESKRIPSI */
+        .description {
+            margin-top: 35px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* MULTIMEDIA */
+        .media-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.2fr;
+            gap: 15px;
+            margin-top: 40px;
+            align-items: start;
+        }
+
+        .media-box {
+            background-color: #684040;
+            border: 1px solid #170707;
+            padding: 10px;
+            min-width: 0;
+        }
+
+        .media-box h3 {
+            margin-top: 0;
+            font-size: 17px;
+        }
+
+        video {
+            width: 100%;
+            height: 230px;
+            width: 260px;
+            
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border: 1px solid #ccc;
+        }
+
+        .attachments ul {
+            padding-left: 20px;
+            line-height: 2;
+        }
+
+        .attachments a {
+            color: #af8e8e;
+        }
+
+        /* FOOTER */
+        footer {
+            max-width: 1000px;
+            margin: auto;
+            padding: 10px;
+            background-color: #5b3d41;
+            color: white;
+            text-align: center;
+        }
+
+        /* TAMPILAN HP */
+        @media (max-width: 650px) {
+            .profile-top {
+                grid-template-columns: 100px 1fr;
+                gap: 15px;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .categories {
+                grid-column: 1 / -1;
+            }
+
+            .media-section {
+                grid-template-columns: 1fr;
+            }
+
+            .identity h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>My Profile Website</h1>
+        <p>Halaman Profil Pribadi</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#media">Media</a>
+        <a href="#lampiran">Lampiran</a>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+        <article id="profil">
+
+            <!-- FOTO DAN IDENTITAS -->
+            <section class="profile-top">
+
+                <div>
+                    <img
+                        src="fotoprofil.jpeg"
+                        alt="Foto profil"
+                        class="profile-photo">
+                </div>
+
+                <div class="identity">
+                    <h2>BIODATA</h2>
+
+                    <p>Nama: Zulfa Zamain <br>
+                        TTL: Garut, 12 Agustus 2006 <br>
+                        Status: Mahasiswa Aktif <br>
+                        Alamat: Kp. Rumbut, Kel. Pasir Gunung Selatan, Cimanggis, Depok <br>
+                        Email: zulfazamain40@gmail.com
+                        
+                    </p>
+                    <p>Whatsapp: 0882-9370-2332</p>
+                </div>
+
+                <!-- ASIDE KATEGORI -->
+                <aside class="categories">
+                    <h3><u>Minat dan Keahlian</u></h3>
+                    <ul>
+                        <li>Web Development</li>
+                        <li>Programming</li>
+                        <li>Artificial Intellegence (AI)</li>
+                    </ul>
+                </aside>
+
+            </section>
+
+            <!-- DESKRIPSI PROFIL -->
+            <section class="description" id="tentang">
+                <p>
+                    Saya merupakan mahasiswa aktif jurusan Teknik Informatika di STT Terpadu Nurul Fikri. Saya memiliki ketertarikan pada dunia teknologi, pemrograman, dan desain web. </p>
+
+Saya senang mempelajari hal baru dan mengembangkan kemampuan diri. Setelah lulus saya bercita-cita ingin menjadi programmer yang professional. di bawah ini ada beberapa informasi tentang saya:
+                </p>
+            </section>
+
+            <!-- MULTIMEDIA DAN LAMPIRAN -->
+            <section class="media-section" id="media">
+
+                <!-- VIDEO -->
+                <div class="media-box">
+                    <h3>Video Saya</h3>
+                    <video controls>
+                        <source src="myvideo.mp4" type="video/mp4">
+                        
+                    </video>
+                </div>
+
+                <!-- GALERI FOTO -->
+                <div class="media-box">
+                    <h3>Foto Saya</h3>
+
+                    <div class="gallery">
+                        <img src="foto1.jpeg" alt="Foto galeri 1">
+                        <img src="foto2.jpeg" alt="Foto galeri 2">
+                        <img src="foto3.jpeg" alt="Foto galeri 3">
+                        <img src="foto4.jpeg" alt="Foto galeri 4">
+                    </div>
+                </div>
+
+                <!-- LAMPIRAN -->
+                <aside class="media-box attachments" id="lampiran">
+                    <h3>Tugas Praktikum UI/UX</h3>
+
+                    <ul>
+                        <li>
+                            <a href="Tugas1uiux.pdf" download>
+                                tugas praktikum 1 (PDF)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="prak2mandiriUIUX.pdf" download>
+                                tugas praktikum 2 (PDF)
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+            </section>
+
+        </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Zulfa Z &copy; 2026 My Profile Website</p>
+    </footer>
+
+</body>
+</html>
